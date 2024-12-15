@@ -7,11 +7,11 @@
     "ioValues": [
         {
             "name": "Wood Thickness",
-            "ioValue": 10
+            "ioValue": 14
         },
         {
             "name": "Angle",
-            "ioValue": 10
+            "ioValue": 90
         }
     ],
     "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
@@ -49,17 +49,17 @@
         {
             "atomType": "Molecule",
             "name": "Upper",
-            "x": 0.22738386308068462,
-            "y": 0.382830626450116,
+            "x": 0.230440097799511,
+            "y": 0.40139211136890957,
             "uniqueID": 1734244297995,
             "ioValues": [
                 {
                     "name": "Wood Thickness",
-                    "ioValue": 10
+                    "ioValue": 14
                 },
                 {
                     "name": "Angle",
-                    "ioValue": 10
+                    "ioValue": 90
                 }
             ],
             "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
@@ -95,8 +95,8 @@
                 {
                     "atomType": "Rectangle",
                     "name": "Rectangle",
-                    "x": 0.1882640586797066,
-                    "y": 0.25986078886310904,
+                    "x": 0.12836185819070906,
+                    "y": 0.2552204176334107,
                     "uniqueID": 1734244325723,
                     "ioValues": [
                         {
@@ -113,8 +113,8 @@
                 {
                     "atomType": "Move",
                     "name": "Move",
-                    "x": 0.3844743276283618,
-                    "y": 0.43387470997679817,
+                    "x": 0.2982885085574572,
+                    "y": 0.25986078886310904,
                     "uniqueID": 1734244382994,
                     "ioValues": [
                         {
@@ -145,7 +145,7 @@
                     "ioValues": [
                         {
                             "name": "A",
-                            "ioValue": 10
+                            "ioValue": 90
                         }
                     ],
                     "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
@@ -160,7 +160,7 @@
                     "ioValues": [
                         {
                             "name": "A",
-                            "ioValue": 10
+                            "ioValue": 90
                         }
                     ],
                     "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
@@ -169,8 +169,8 @@
                 {
                     "atomType": "Move",
                     "name": "Move",
-                    "x": 0.29156479217603914,
-                    "y": 0.6334106728538283,
+                    "x": 0.23227383863080686,
+                    "y": 0.4153132250580046,
                     "uniqueID": 1734244485586,
                     "ioValues": [
                         {
@@ -191,6 +191,58 @@
                         }
                     ],
                     "description": "Moves a shape laterally in X, Y, Z."
+                },
+                {
+                    "atomType": "Rotate",
+                    "name": "Rotate",
+                    "x": 0.2885085574572127,
+                    "y": 0.7981438515081206,
+                    "uniqueID": 1734244501185,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": 1734244485586
+                        },
+                        {
+                            "name": "x-axis degrees",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "y-axis degrees",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "z-axis degrees",
+                            "ioValue": 45
+                        }
+                    ],
+                    "description": "Rotates the input geometry around the X, Y, or Z axis. Inputs are degrees."
+                },
+                {
+                    "atomType": "Rotate",
+                    "name": "Rotate",
+                    "x": 0.35146699266503667,
+                    "y": 0.5127610208816705,
+                    "uniqueID": 1734244504093,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": 1734244382994
+                        },
+                        {
+                            "name": "x-axis degrees",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "y-axis degrees",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "z-axis degrees",
+                            "ioValue": -45
+                        }
+                    ],
+                    "description": "Rotates the input geometry around the X, Y, or Z axis. Inputs are degrees."
                 }
             ],
             "allConnectors": [
@@ -221,6 +273,34 @@
                     "ap2Primary": true,
                     "ap1ID": 1734244325723,
                     "ap2ID": 1734244485586
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 1734244382994,
+                    "ap2ID": 1734244504093
+                },
+                {
+                    "ap1Name": "result",
+                    "ap2Name": "z-axis degrees",
+                    "ap2Primary": false,
+                    "ap1ID": 1734244407762,
+                    "ap2ID": 1734244501185
+                },
+                {
+                    "ap1Name": "result",
+                    "ap2Name": "z-axis degrees",
+                    "ap2Primary": false,
+                    "ap1ID": 1734244415827,
+                    "ap2ID": 1734244504093
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 1734244485586,
+                    "ap2ID": 1734244501185
                 }
             ],
             "fileTypeVersion": 1,
@@ -229,17 +309,17 @@
         {
             "atomType": "Molecule",
             "name": "Lower",
-            "x": 0.23838630806845965,
+            "x": 0.23655256723716384,
             "y": 0.6450116009280743,
             "uniqueID": 1734244300213,
             "ioValues": [
                 {
                     "name": "Wood Thickness",
-                    "ioValue": 10
+                    "ioValue": 14
                 },
                 {
                     "name": "Angle",
-                    "ioValue": 10
+                    "ioValue": 90
                 }
             ],
             "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
