@@ -1286,8 +1286,8 @@
         {
             "atomType": "Molecule",
             "name": "In Use",
-            "x": 0.5804311774461028,
-            "y": 0.7548746518105849,
+            "x": 0.582010582010582,
+            "y": 0.7409470752089137,
             "uniqueID": 1734737371878,
             "ioValues": [
                 {
@@ -1757,12 +1757,7 @@
                                     "x": 0.98,
                                     "y": 0.5,
                                     "uniqueID": 1734739079516,
-                                    "ioValues": [
-                                        {
-                                            "name": "number or geometry",
-                                            "ioValue": 1734739080061
-                                        }
-                                    ],
+                                    "ioValues": [],
                                     "description": "Connect geometry here to make it available in the next level up. "
                                 },
                                 {
@@ -2398,7 +2393,7 @@
                                 }
                             ],
                             "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape",
-                            "unionType": "Fusion",
+                            "unionType": "Assembly",
                             "unionIndex": 1
                         },
                         {
