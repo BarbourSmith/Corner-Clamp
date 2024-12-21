@@ -1329,13 +1329,17 @@
                 {
                     "atomType": "Join",
                     "name": "Assembly",
-                    "x": 0.8128306878306878,
-                    "y": 0.2924791086350975,
+                    "x": 0.8126036484245439,
+                    "y": 0.28690807799442897,
                     "uniqueID": 1734737403684,
                     "ioValues": [
                         {
                             "name": "Shape 3",
                             "ioValue": 1734737801522
+                        },
+                        {
+                            "name": "Shape 4",
+                            "ioValue": 1734739058480
                         }
                     ],
                     "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape",
@@ -1345,7 +1349,7 @@
                 {
                     "atomType": "Molecule",
                     "name": "Wood",
-                    "x": 0.2943615257048093,
+                    "x": 0.28772802653399665,
                     "y": 0.7994428969359332,
                     "uniqueID": 1734737414933,
                     "ioValues": [
@@ -1689,8 +1693,8 @@
                 {
                     "atomType": "Molecule",
                     "name": "Clamp",
-                    "x": 0.35572139303482586,
-                    "y": 0.40111420612813375,
+                    "x": 0.3606965174129353,
+                    "y": 0.3955431754874652,
                     "uniqueID": 1734739058480,
                     "ioValues": [
                         {
@@ -1711,7 +1715,12 @@
                             "x": 0.98,
                             "y": 0.5,
                             "uniqueID": 1734739058605,
-                            "ioValues": [],
+                            "ioValues": [
+                                {
+                                    "name": "number or geometry",
+                                    "ioValue": 1734739386070
+                                }
+                            ],
                             "description": "Connect geometry here to make it available in the next level up. "
                         },
                         {
@@ -2295,8 +2304,8 @@
                         {
                             "atomType": "Move",
                             "name": "Move",
-                            "x": 0.46849087893864017,
-                            "y": 0.1894150417827298,
+                            "x": 0.3913764510779436,
+                            "y": 0.21448467966573817,
                             "uniqueID": 1734739111186,
                             "ioValues": [
                                 {
@@ -2321,8 +2330,8 @@
                         {
                             "atomType": "Rotate",
                             "name": "Rotate",
-                            "x": 0.6650082918739636,
-                            "y": 0.47075208913649025,
+                            "x": 0.5248756218905473,
+                            "y": 0.2813370473537604,
                             "uniqueID": 1734739175625,
                             "ioValues": [
                                 {
@@ -2339,7 +2348,7 @@
                                 },
                                 {
                                     "name": "z-axis degrees",
-                                    "ioValue": 90
+                                    "ioValue": 135
                                 }
                             ],
                             "description": "Rotates the input geometry around the X, Y, or Z axis. Inputs are degrees."
@@ -2347,8 +2356,8 @@
                         {
                             "atomType": "Rotate",
                             "name": "Rotate",
-                            "x": 0.6724709784411277,
-                            "y": 0.8384401114206128,
+                            "x": 0.521558872305141,
+                            "y": 0.5682451253481894,
                             "uniqueID": 1734739274047,
                             "ioValues": [
                                 {
@@ -2365,49 +2374,112 @@
                                 },
                                 {
                                     "name": "z-axis degrees",
-                                    "ioValue": 0
+                                    "ioValue": 225
                                 }
                             ],
                             "description": "Rotates the input geometry around the X, Y, or Z axis. Inputs are degrees."
                         },
                         {
                             "atomType": "Equation",
-                            "name": "A/2",
-                            "x": 0.2810945273631841,
-                            "y": 0.7604456824512534,
+                            "name": "A/2 + 180",
+                            "x": 0.35323383084577115,
+                            "y": 0.520891364902507,
                             "uniqueID": 1734739319308,
                             "ioValues": [
                                 {
                                     "name": "A",
-                                    "ioValue": 1
+                                    "ioValue": 90
                                 }
                             ],
                             "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
-                            "currentEquation": "A/2"
+                            "currentEquation": "A/2 + 180"
                         },
                         {
                             "atomType": "Equation",
-                            "name": "A/-2",
+                            "name": "A/-2+180",
                             "x": 0.3938640132669983,
                             "y": 0.8523676880222841,
                             "uniqueID": 1734739326030,
                             "ioValues": [
                                 {
                                     "name": "A",
-                                    "ioValue": 1
+                                    "ioValue": 90
                                 }
                             ],
                             "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
-                            "currentEquation": "A/-2"
+                            "currentEquation": "A/-2+180"
+                        },
+                        {
+                            "atomType": "Join",
+                            "name": "Fusion",
+                            "x": 0.6243781094527363,
+                            "y": 0.40668523676880225,
+                            "uniqueID": 1734739347710,
+                            "ioValues": [
+                                {
+                                    "name": "Shape 1",
+                                    "ioValue": 1734739274047
+                                },
+                                {
+                                    "name": "Shape 2",
+                                    "ioValue": 1734739175625
+                                }
+                            ],
+                            "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape",
+                            "unionType": "Fusion",
+                            "unionIndex": 1
+                        },
+                        {
+                            "atomType": "Extrude",
+                            "name": "Extrude",
+                            "x": 0.6840796019900497,
+                            "y": 0.7688022284122563,
+                            "uniqueID": 1734739370847,
+                            "ioValues": [
+                                {
+                                    "name": "geometry",
+                                    "ioValue": 1734739347710
+                                },
+                                {
+                                    "name": "height",
+                                    "ioValue": 30
+                                }
+                            ],
+                            "description": "Extrudes a 2D shape. Input can be negitive. "
+                        },
+                        {
+                            "atomType": "Tag",
+                            "name": "Clamp",
+                            "x": 0.785240464344942,
+                            "y": 0.5376044568245125,
+                            "uniqueID": 1734739386070,
+                            "ioValues": [
+                                {
+                                    "name": "geometry",
+                                    "ioValue": 1734739370847
+                                }
+                            ],
+                            "description": "Tags geometry so that it can be extracted later.",
+                            "tags": [
+                                "Clamp"
+                            ],
+                            "cutTag": false
                         }
                     ],
                     "allConnectors": [
                         {
                             "ap1Name": "number or geometry",
-                            "ap2Name": "z-axis degrees",
+                            "ap2Name": "A",
                             "ap2Primary": false,
                             "ap1ID": 1734739058609,
-                            "ap2ID": 1734739175625
+                            "ap2ID": 1734739319308
+                        },
+                        {
+                            "ap1Name": "number or geometry",
+                            "ap2Name": "A",
+                            "ap2Primary": false,
+                            "ap1ID": 1734739058609,
+                            "ap2ID": 1734739326030
                         },
                         {
                             "ap1Name": "Geometry",
@@ -2429,10 +2501,59 @@
                             "ap2Primary": true,
                             "ap1ID": 1734739111186,
                             "ap2ID": 1734739274047
+                        },
+                        {
+                            "ap1Name": "geometry",
+                            "ap2Name": "Shape 2",
+                            "ap2Primary": false,
+                            "ap1ID": 1734739175625,
+                            "ap2ID": 1734739347710
+                        },
+                        {
+                            "ap1Name": "geometry",
+                            "ap2Name": "Shape 1",
+                            "ap2Primary": false,
+                            "ap1ID": 1734739274047,
+                            "ap2ID": 1734739347710
+                        },
+                        {
+                            "ap1Name": "result",
+                            "ap2Name": "z-axis degrees",
+                            "ap2Primary": false,
+                            "ap1ID": 1734739319308,
+                            "ap2ID": 1734739274047
+                        },
+                        {
+                            "ap1Name": "result",
+                            "ap2Name": "z-axis degrees",
+                            "ap2Primary": false,
+                            "ap1ID": 1734739326030,
+                            "ap2ID": 1734739175625
+                        },
+                        {
+                            "ap1Name": "geometry",
+                            "ap2Name": "geometry",
+                            "ap2Primary": true,
+                            "ap1ID": 1734739347710,
+                            "ap2ID": 1734739370847
+                        },
+                        {
+                            "ap1Name": "geometry",
+                            "ap2Name": "geometry",
+                            "ap2Primary": true,
+                            "ap1ID": 1734739370847,
+                            "ap2ID": 1734739386070
+                        },
+                        {
+                            "ap1Name": "geometry",
+                            "ap2Name": "number or geometry",
+                            "ap2Primary": false,
+                            "ap1ID": 1734739386070,
+                            "ap2ID": 1734739058605
                         }
                     ],
                     "fileTypeVersion": 1,
-                    "compiledBom": {}
+                    "compiledBom": []
                 }
             ],
             "allConnectors": [
@@ -2469,6 +2590,13 @@
                     "ap2Name": "Shape 3",
                     "ap2Primary": false,
                     "ap1ID": 1734737801522,
+                    "ap2ID": 1734737403684
+                },
+                {
+                    "ap1Name": "Geometry",
+                    "ap2Name": "Shape 4",
+                    "ap2Primary": false,
+                    "ap1ID": 1734739058480,
                     "ap2ID": 1734737403684
                 }
             ],
