@@ -1745,7 +1745,7 @@
                             "atomType": "GitHubMolecule",
                             "name": "Rectangle-Rounded",
                             "x": 0.24626865671641793,
-                            "y": 0.15598885793871867,
+                            "y": 0.20055710306406688,
                             "uniqueID": 1734739079655,
                             "ioValues": [
                                 {
@@ -2304,8 +2304,8 @@
                         {
                             "atomType": "Move",
                             "name": "Move",
-                            "x": 0.3913764510779436,
-                            "y": 0.21448467966573817,
+                            "x": 0.39054726368159204,
+                            "y": 0.22005571030640667,
                             "uniqueID": 1734739111186,
                             "ioValues": [
                                 {
@@ -2318,7 +2318,7 @@
                                 },
                                 {
                                     "name": "yDist",
-                                    "ioValue": 30
+                                    "ioValue": 75
                                 },
                                 {
                                     "name": "zDist",
@@ -2464,6 +2464,30 @@
                                 "Clamp"
                             ],
                             "cutTag": false
+                        },
+                        {
+                            "atomType": "Constant",
+                            "name": "Thickness",
+                            "x": 0.1384742951907131,
+                            "y": 0.807799442896936,
+                            "uniqueID": 1734739728046,
+                            "ioValues": [],
+                            "description": "Defines a mathematical constant."
+                        },
+                        {
+                            "atomType": "Equation",
+                            "name": "90-T",
+                            "x": 0.2595356550580431,
+                            "y": 0.7910863509749304,
+                            "uniqueID": 1734739913498,
+                            "ioValues": [
+                                {
+                                    "name": "T",
+                                    "ioValue": 15
+                                }
+                            ],
+                            "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
+                            "currentEquation": "90-T"
                         }
                     ],
                     "allConnectors": [
@@ -2550,6 +2574,27 @@
                             "ap2Primary": false,
                             "ap1ID": 1734739386070,
                             "ap2ID": 1734739058605
+                        },
+                        {
+                            "ap1Name": "number",
+                            "ap2Name": "Radius",
+                            "ap2Primary": false,
+                            "ap1ID": 1734739728046,
+                            "ap2ID": 1734739079655
+                        },
+                        {
+                            "ap1Name": "number",
+                            "ap2Name": "T",
+                            "ap2Primary": false,
+                            "ap1ID": 1734739728046,
+                            "ap2ID": 1734739913498
+                        },
+                        {
+                            "ap1Name": "result",
+                            "ap2Name": "yDist",
+                            "ap2Primary": false,
+                            "ap1ID": 1734739913498,
+                            "ap2ID": 1734739111186
                         }
                     ],
                     "fileTypeVersion": 1,
